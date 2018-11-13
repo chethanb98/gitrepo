@@ -1,0 +1,11 @@
+package com.test.algos.ds;
+
+public class LCS {
+	
+	public void LCSString(String str1, String str2) {
+		int i,j;
+		int min = Math.min(str1.length(), str2.length());
+		
+		
+	}
+}

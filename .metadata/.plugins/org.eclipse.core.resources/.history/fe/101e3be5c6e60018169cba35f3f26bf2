@@ -1,0 +1,54 @@
+package com.test.spark.sparkexamplestest
+
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.Dataset
+import org.apache.spark.sql.Row
+
+object TestMe extends App{
+   def main(args: Array[String]){
+     
+     val spark =SparkSession.builder().appName("spark assignment").master("local").getOrCreate()
+    
+    val rawData = spark.read.json("/Users/cbhawarlal/Downloads/ad-events/part-00000-732eeb74-f251-4f96-85d5-5c9ae95ba709-c000.txt") 
+    
+    import spark.implicits._
+    
+    val castedData =rawData.map(x => JsonData( x.getAs[String]("id"),x.getAs[String]("timestamp"),x.getAs[String]("type"),x.getAs[String]("visitorId"),x.getAs[String]("pageUrl"), null))
+    .filter(x => (x.visitorId!=null)).distinct()
+    
+    val rdd_keyVal = castedData.rdd.map(x => (x.visitorId, x))
+        
+    val grpdata = rdd_keyVal.groupByKey().map(leadLink) //.toList.sortBy(r => r.getString(2))))
+    
+//    val sld = grpdata.map(x => (x._2))
+//    
+//    sld.map(leadLink).take(10).foreach(println)
+    
+    //sld.take(10).foreach(println)
+        
+//    val test1 = sld.foreachPartition(x => x.foreach(z =>z.foreach(k => println(z.tail.head.get(1)))))
+//    
+//    val test = sld.foreach(x => x.foreach{z => if(x.toIterator.hasNext) println(z.toSeq ++ Array[Any](x.tail.head.get(1),x.tail.head.get(2))) else (z,null)})
+//        
+//    val result = sld.map(x => x.foreach(y => y.toSeq.zip(x.sliding(2).next())))        
+    
+    //result.take(10).foreach(println)
+    
+   }
+   def leadLink(s : String, itr : Iterable[JsonData]): List[Row] = {
+     itr.
+   }
+}
+case class JsonData( id: String, timestamp:String, eventType :String, visitorId: String,  pageUrl: String, nextPageUrl : String) extends Ordered[JsonData]{
+  
+  def compare (that: JsonData) = {
+        if (this.timestamp == that.timestamp)
+            0 ;
+        else if (this.timestamp > that.timestamp)
+            1 ;
+        else{
+          
+        }
+            −1 ;
+    }
+}

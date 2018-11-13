@@ -1,0 +1,22 @@
+package com.test.algos.ds;
+
+import java.util.ArrayList;
+
+public class PossiblePermutes {
+	PossiblePermutes(String str){
+		List<String> list = new ArrayList<>();
+		permutes(str,0,str.length()-1,list);
+	}
+	void permutes(String str, int l, int r, ArrayList<String> list) {
+		if(l==r) {
+			list.add(str);
+		}
+		else {
+			for(int i=l; i<r;i++)
+			{
+				//swap
+				permutes(str,l+1,r,list);
+			}
+		}
+	}
+}

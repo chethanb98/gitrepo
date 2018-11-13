@@ -1,0 +1,50 @@
+package com.test.mongo.mongoconnection;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class helloWorld {
+	public static void main(String[] args) {
+
+		System.out.println("this is fibonaci series");
+	
+        int n = 10;
+        long[] fib = generateFibonaccis(n);
+        for (int i = 0; i < n; i++) {
+            System.out.print(Long.toUnsignedString(fib[i]) + " ");
+        }
+        int [] nums = {2,8,20,40};
+        twosum(nums,28);
+	}		
+	// fibonacci series for a given number
+	public static long[] generateFibonaccis(int n) {
+        long[] fib = new long[n];
+        fib[0] = 1;
+        fib[1] = 1;
+        for (int i = 2; i < n; ++i) {
+            fib[i] = fib[i - 2] + fib[i - 1];
+        }
+        return fib;
+    }
+	// Given a array of number and a target (sum of two numbers)
+	public static int[]twosum(int []nums,int target)
+	{
+		Map<Integer,Integer> map = new HashMap<>();
+		for (int i=0;i<nums.length;i++)
+		{
+			int complement = target - nums[i];
+			if(map.containsKey(complement))
+			{
+				System.out.println("the indices for the target number"+i+map.get(complement));
+				return new int[] {i,map.get(complement)};
+			}
+			map.put(nums[i], i);
+		}
+		throw new IllegalArgumentException("number does not exist");		
+	}
+	
+	public int lengthOfLongestSubstring(String s) {
+        String [] newString = s.toCharArray();
+        
+    }
+}

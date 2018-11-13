@@ -1,0 +1,21 @@
+package com.test.algos.ds;
+
+public class LCS {	
+	public int LCSString(String str1, String str2) {
+		int i =0,j=1, ans =0;
+		while(i<str1.length() && j<=str1.length()) {
+			if(str2.contains(str1.substring(i, j))) {
+				ans = Math.max(ans, j-i);
+				j++;
+			}else {
+				i=j;
+				j++;
+			}			
+		}
+		return ans;
+	}
+	public static void main(String []args) {
+		LCS a = new LCS();
+		System.out.println("LCS of two  "+a.LCSString("GeeksforGeeks", "GeeksforGeeks"));
+	}
+}

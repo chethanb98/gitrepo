@@ -1,0 +1,8 @@
+package com.test.algos.ds;
+
+public class LCS {
+	
+	public void LCSString(String str1, String str2) {
+		
+	}
+}

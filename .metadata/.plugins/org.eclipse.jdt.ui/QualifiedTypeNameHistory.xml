@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.commons.lang.exception.ExceptionUtils"/>
+<fullyQualifiedTypeName name="scala.collection.mutable.ListBuffer"/>
+<fullyQualifiedTypeName name="javax.mail.Address"/>
+<fullyQualifiedTypeName name="org.mongodb.scala.bson.BsonDocument"/>
+<fullyQualifiedTypeName name="org.bson.BsonDocument"/>
+<fullyQualifiedTypeName name="com.mongodb.client.result.UpdateResult"/>
+<fullyQualifiedTypeName name="com.mongodb.client.model.Filters"/>
+<fullyQualifiedTypeName name="org.bson.BsonInt32"/>
+<fullyQualifiedTypeName name="org.mongodb.scala.Observable"/>
+<fullyQualifiedTypeName name="com.mongodb.client.model.Projections"/>
+<fullyQualifiedTypeName name="com.mongodb.client.FindIterable"/>
+<fullyQualifiedTypeName name="com.mongodb.async.client.Observer"/>
+<fullyQualifiedTypeName name="org.mongodb.scala.Observer"/>
+<fullyQualifiedTypeName name="org.bson.Document"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.xml.soap.Node"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="com.test.algos.ds.DLL1"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="org.apache.spark.sql.Row"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

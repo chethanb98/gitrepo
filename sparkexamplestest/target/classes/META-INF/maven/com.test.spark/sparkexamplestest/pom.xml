@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.test.spark</groupId>
+  <artifactId>sparkexamplestest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>sparkexamplestest</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>		
+		<dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.11.8</version>
+        </dependency>	
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>   
+            <version>2.2.1</version>         
+            <scope>provided</scope>
+        </dependency>  
+         <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>2.2.1</version>	
+        </dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mongodb.spark/mongo-spark-connector -->
+<dependency>
+    <groupId>org.mongodb.spark</groupId>
+    <artifactId>mongo-spark-connector_2.11</artifactId>
+    <version>2.2.1</version>
+    <scope>system</scope>
+	<systemPath>${project.basedir}/src/main/resources/lib/mongo-spark-connector_2.11-2.2.1.jar</systemPath>
+</dependency>
+		
+<dependency>
+    <groupId>org.mongodb</groupId>
+    <artifactId>mongo-java-driver</artifactId>
+    <version>3.4.2</version>
+    <scope>system</scope>
+	<systemPath>${project.basedir}/src/main/resources/lib/mongo-java-driver-3.4.2.jar</systemPath>
+</dependency>
+		
+        <!-- 
+        <dependency>
+    <groupId>mongodb</groupId>
+    <artifactId>mongo-spark</artifactId>
+    <version>2.2.1-s_2.11</version>
+		</dependency> -->
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId> 
+	      <version>3.8.1</version>
+	      <scope>test</scope>
+	    </dependency>
+	    <!-- https://mvnrepository.com/artifact/mongodb/mongo-spark -->
+	    
+	    <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>2.2.1</version>
+        </dependency>	
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-catalyst_2.11</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+        
+        <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>1.6.1</version>
+            </dependency>
+            
+            <dependency>
+				<groupId>org.apache.spark</groupId>
+                <artifactId>spark-sql-kafka-0-10_2.11</artifactId>
+                <version>2.2.1</version>
+			 </dependency>	    	    
+				<dependency>
+				    <groupId>org.mongodb.scala</groupId>
+				    <artifactId>mongo-scala-driver_2.11</artifactId>
+				    <version>2.2.1</version>
+   				</dependency>
+   				<!-- https://mvnrepository.com/artifact/org.scala-lang/scala-reflect -->
+<dependency>
+    <groupId>org.scala-lang</groupId>
+    <artifactId>scala-reflect</artifactId>
+    <version>2.11.12</version>
+</dependency>
+   				
+   				
+  </dependencies>
+</project>

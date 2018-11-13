@@ -1,0 +1,24 @@
+package com.test.algos.ds;
+
+public class LCS {
+	
+	public int LCSString(String str1, String str2) {
+		int i =0,j=0, ans =0;
+		int min = Math.min(str1.length(), str2.length());
+		while(i<str1.length() && j<str1.length()) {
+			if(str2.contains(str1.substring(i, j))) {
+				ans = Math.max(ans, j-i);
+				j++;
+			}else {
+				i++;
+				j++;
+			}
+			
+		}
+		return ans+1;
+	}
+	public static void main(String []args) {
+		LCS a = new LCS();
+		System.out.println("LCS of two  "+a.LCSString("aabd", "aab"));
+	}
+}
